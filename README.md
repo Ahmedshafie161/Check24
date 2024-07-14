@@ -2,7 +2,7 @@
 TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 This project aims to solve Check24 Mid Senior Task. 
 
-Technologies used :
+**Technologies used :**
 1. Modularity : Multi Module - by Component
 2. Architecture Design Pattern : MVI using base class + Clean Architecture
 3. Gradle DSL
