@@ -3,13 +3,13 @@ TODO: Give a short introduction of your project. Let this section explain the ob
 This project aims to solve Check24 Mid Senior Task. 
 
 Technologies used :
-  Modularity : Multi Module - by Component
-  Architecture Design Pattern : MVI using base class + Clean Architecture
-  Gradle DSL
-  jetpack Compose
-  Kotlin
-  Splash Screen Api
-  Edge To Edge
+1. Modularity : Multi Module - by Component
+2. Architecture Design Pattern : MVI using base class + Clean Architecture
+3. Gradle DSL
+4. Jetpack Compose
+5. Kotlin
+6. Splash Screen Api
+7. Edge To Edge
   
   Libraries :
     Netowrking  : Retrofit , Coil
