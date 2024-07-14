@@ -13,10 +13,10 @@ This project aims to solve Check24 Mid Senior Task.
 7. Edge To Edge
   
   Libraries :
-    Netowrking  : Retrofit , Coil
-    Database    : Room
-    Testing     : Mockito , Espresso
-    Support     : leak Canary , Firebase Crachlytics
+    1. Netowrking  : 1. Retrofit , 2. Coil
+    2. Database    : Room
+    3. Testing     : 1. Mockito , 2. Espresso
+    4. Support     : 1. leak Canary , 2. Firebase Crachlytics
 
   Peroformance Optimization : R8 + Baseline profiler
   
