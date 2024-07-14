@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitFactory {
 
-private const val BASEK_CHECK_URL = ""
+private const val BASE_CHECK_URL = ""
     private var retrofit: Retrofit? = null
     private fun init(baseUrl: String, client: OkHttpClient, converter: Converter.Factory) =
         Retrofit.Builder()
@@ -21,7 +21,7 @@ private const val BASEK_CHECK_URL = ""
 
     var gson = GsonBuilder().setLenient().create()
     fun <T> create(
-        baseUrl: String = BASEK_CHECK_URL,
+        baseUrl: String = BASE_CHECK_URL,
         client: OkHttpClient = getOkHttpClientWithInterceptor(),
         converter: Converter.Factory = GsonConverterFactory.create(gson),
         apiService: Class<T>
