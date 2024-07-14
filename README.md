@@ -3,7 +3,7 @@
 # Introduction 
 This project aims to solve Check24 Mid Senior Task. 
 
-**Technologies used :**
+# **Technologies  :**
 1. Modularity : Multi Module - by Component
 2. Architecture Design Pattern : MVI using base class + Clean Architecture
 3. Gradle DSL
