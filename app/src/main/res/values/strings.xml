@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Check24</string>
+    <string name="explore">Explore</string>
+    <string name="impact">Impact</string>
+    <string name="camera">Camera</string>
+    <string name="rewards">Rewards</string>
+    <string name="more">More</string>
+    <string name="empty"></string>
+    <string name="feed">Feed</string>
+    <string name="shop">Shop</string>
+    <string name="wallet">Wallet</string>
+    <string name="brands">Brands</string>
+    <string name="profile">Profile</string>
+    <string name="cart">Cart</string>
+</resources>
