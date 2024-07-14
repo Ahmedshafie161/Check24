@@ -1,5 +1,4 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 This project aims to solve Check24 Mid Senior Task. 
 
 **Technologies used :**
