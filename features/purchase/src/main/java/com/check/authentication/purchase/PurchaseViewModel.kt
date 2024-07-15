@@ -8,6 +8,7 @@ import com.check.ui.base.IGlobalState
 import com.check.ui.base.extentions.execIOResMain
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -27,10 +28,12 @@ class PurchaseViewModel @Inject constructor(
     }
     fun init (){
         if(isIntialized.not()){
+            setState { currentState.copy(isLoading = true) }
             viewModelScope.launch(Dispatchers.IO) {
                 fetchProductListUseCase().fold(
-                    onSuccess = {setState { currentState.copy(it.toProductListUiModel()) }},
-                    onFailure = {}
+                    onSuccess = {
+                        setState { currentState.copy(it.toProductListUiModel(),false) }},
+                    onFailure = {setState { currentState.copy(isLoading = false) }}
                 )
             }
             isIntialized = true

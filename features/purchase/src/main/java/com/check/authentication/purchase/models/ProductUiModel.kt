@@ -12,6 +12,6 @@ data class ProductUiModel(
     val description: String,
     val longDescription: String,
     val rating: Double,
-    val priceDataModel: PriceUiModel
+    val priceUiModel: PriceUiModel
 )
 

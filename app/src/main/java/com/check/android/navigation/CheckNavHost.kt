@@ -22,7 +22,7 @@ fun CheckNavHost(startDestination: String = PURCHASE_NAV_ROUTE) {
     val navController = rememberNavController()
     Scaffold(modifier = Modifier,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
-        bottomBar = { BottomNavigation(navController) }) {
+        ) {
         NavHost(
             modifier = Modifier.semantics { testTagsAsResourceId = true },
             navController = navController,

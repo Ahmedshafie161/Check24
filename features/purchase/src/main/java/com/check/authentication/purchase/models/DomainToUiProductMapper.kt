@@ -4,11 +4,12 @@ import com.check.product.domain.models.HeaderDomainModel
 import com.check.product.domain.models.PriceDomainModel
 import com.check.product.domain.models.ProductDomainModel
 import com.check.product.domain.models.ProductListDomainModel
+import kotlinx.collections.immutable.toImmutableList
 
 internal fun ProductListDomainModel.toProductListUiModel() = ProductListUiModel(
     headerUiModel = this.headerDomainModel.toHeaderUiModel(),
-    filters = this.filters,
-    productUiModels = this.productDomainModels.map { it.toProductUiModel() }
+    filters = this.filters.toImmutableList(),
+    productUiModels = this.productDomainModels.map { it.toProductUiModel() }.toImmutableList()
 )
 
 internal fun ProductDomainModel.toProductUiModel() = ProductUiModel(
@@ -23,7 +24,7 @@ internal fun ProductDomainModel.toProductUiModel() = ProductUiModel(
     description = this.description,
     longDescription = this.longDescription,
     rating = this.rating,
-    priceDataModel = this.priceDataModel.toPriceUiModel()
+    priceUiModel = this.priceDataModel.toPriceUiModel()
 )
 
 internal fun PriceDomainModel.toPriceUiModel() = PriceUiModel(
