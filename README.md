@@ -15,7 +15,7 @@ This project aims to solve Check24 Mid Senior Task.
 6. Ui : Jetpack Compose , Splash Screen Api , Edge To Edge
 7. Peroformance Optimization : R8 + Baseline profiler
 8. Libraries :
-   - Netowrking  : Retrofit , Coil
-   - Database    : Room
+   * Netowrking  : Retrofit , Coil
+   -* Database    : Room
    - Testing     : Mockito , Espresso
    - Support     : Leak Canary , Firebase Crachlytics  
