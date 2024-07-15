@@ -23,11 +23,11 @@ This project aims to solve Check24 Mid Senior Task.
 - Splash Screen Api
 - Edge To Edge
      
-7. **Peroformance Optimization**
+7. **_Peroformance Optimization_**
  - R8
  - Baseline profile
      
-8. **Libraries**
+8. _**Libraries**_
 - Netowrking
   - Retrofit
   - Coil
