@@ -5,10 +5,8 @@ import com.check.purchase.models.toProductListUiModel
 import com.check.product.domain.usecases.FetchProductListUseCase
 import com.check.ui.base.BaseViewModel
 import com.check.ui.base.IGlobalState
-import com.check.ui.base.extentions.execIOResMain
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -23,20 +21,32 @@ class PurchaseViewModel @Inject constructor(
     override fun setInitialState() = PurchaseContract.State()
     override fun handleEvents(event: PurchaseContract.Event) {
         when (event) {
-            else -> {}
+            PurchaseContract.Event.OnDismissAlertDialog -> setState { currentState.copy(PurchaseState.Loading) }
+            PurchaseContract.Event.Refresh -> refresh()
         }
     }
     fun init (){
         if(isIntialized.not()){
-            setState { currentState.copy(isLoading = true) }
-            viewModelScope.launch(Dispatchers.IO) {
-                fetchProductListUseCase().fold(
-                    onSuccess = {
-                        setState { currentState.copy(it.toProductListUiModel(),false) }},
-                    onFailure = {setState { currentState.copy(isLoading = false) }}
-                )
-            }
+            setState { currentState.copy(PurchaseState.Loading) }
+            fetchProductAndPopulateUi()
             isIntialized = true
         }
+    }
+
+    private fun fetchProductAndPopulateUi() {
+        viewModelScope.launch(Dispatchers.IO) {
+            fetchProductListUseCase().fold(
+                onSuccess = {
+                    setState { currentState.copy(PurchaseState.Data(it.toProductListUiModel())) }
+                },
+                onFailure = {
+                    setState { currentState.copy(PurchaseState.Error) }
+                }
+            )
+        }
+    }
+
+    fun refresh(){
+        fetchProductAndPopulateUi()
     }
 }

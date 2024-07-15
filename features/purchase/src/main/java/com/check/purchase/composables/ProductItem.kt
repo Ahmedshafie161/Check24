@@ -43,34 +43,46 @@ fun ProductItem(productUiModel: () -> ProductUiModel) {
         elevation = CustomTheme.sizing.small
     ) {
         Row(modifier = Modifier.padding(CustomTheme.sizing.x)) {
-            RemoteImage(
-                modifier = Modifier.size(CustomTheme.sizing.medium),
-                imageUrl = updatedProductModel.value.imageURL,
-            )
-            Spacer(modifier = Modifier.width(CustomTheme.sizing.x))
+            if (updatedProductModel.value.available) {
+                RemoteImage(
+                    modifier = Modifier.size(CustomTheme.sizing.medium),
+                    imageUrl = updatedProductModel.value.imageURL,
+                )
+                Spacer(modifier = Modifier.width(CustomTheme.sizing.x))
+            }
             Column(modifier = Modifier.weight(1f)) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(updatedProductModel.value.name, fontWeight = FontWeight.Bold)
-                    Text(
-                        updatedProductModel.value.releaseDate.toFormattedDateString(),
-                        style = CustomTheme.typography.label_12_req,
-                        color = Color.Gray
-                    )
+                    if (updatedProductModel.value.available) {
+                        Text(
+                            updatedProductModel.value.releaseDate.toFormattedDateString(),
+                            style = CustomTheme.typography.label_12_req,
+                            color = Color.Gray
+                        )
+                    }
                 }
                 Text(updatedProductModel.value.description)
-                Text(
-                    stringResource(
-                        id = R.string.purchase_product_price,
-                        updatedProductModel.value.priceUiModel.value,
-                        updatedProductModel.value.priceUiModel.currency
-                    ),
-                    fontWeight = FontWeight.Bold,
-                    color = Color.Black
-                )
+                if (updatedProductModel.value.available) {
+                    Text(
+                        stringResource(
+                            id = R.string.purchase_product_price,
+                            updatedProductModel.value.priceUiModel.value,
+                            updatedProductModel.value.priceUiModel.currency
+                        ),
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Black
+                    )
+                }
                 RatingStars(updatedProductModel)
+            }
+            if (updatedProductModel.value.available.not()) {
+                RemoteImage(
+                    modifier = Modifier.size(CustomTheme.sizing.medium),
+                    imageUrl = updatedProductModel.value.imageURL,
+                )
             }
         }
     }

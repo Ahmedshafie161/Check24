@@ -2,6 +2,8 @@ package com.check.purchase.navigation;
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -11,6 +13,7 @@ import com.check.purchase.composables.PurchaseScreen
 import com.check.ui.base.sideEffect
 import com.check.ui.base.viewState
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 internal fun PurchaseRoute(
     modifier: Modifier = Modifier,
@@ -20,6 +23,7 @@ internal fun PurchaseRoute(
 ) {
     viewModel.init()
     val state = viewModel.viewState()
+
     PurchaseScreen(
         modifier = modifier
             .fillMaxSize()

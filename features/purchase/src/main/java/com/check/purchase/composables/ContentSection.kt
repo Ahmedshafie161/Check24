@@ -30,7 +30,7 @@ fun ContentSection(
         Spacer(modifier = Modifier.height(CustomTheme.sizing.x))
 
         LazyColumn(Modifier.heightIn(max = 650.dp)) {
-            items(productUiModelList(),key = {it.id}) { ProductItem { it } }
+            items(productUiModelList(), key = { it.id }) { ProductItem { it } }
         }
     }
 }
