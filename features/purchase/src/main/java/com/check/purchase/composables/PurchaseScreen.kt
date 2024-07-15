@@ -1,24 +1,27 @@
 package com.check.purchase.composables
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
-import androidx.compose.material.pullrefresh.PullRefreshState
+import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import com.check.authentication.R
 import com.check.designsystem.theme.CustomTheme
 import com.check.purchase.PurchaseContract
@@ -32,9 +35,12 @@ internal fun PurchaseScreen(
     state: () -> State<PurchaseContract.State>,
     onBackPressed: () -> Unit
 ) {
-    val pullRefreshState = rememberPullRefreshState(state().value.isRefreshing, { onEvent(PurchaseContract.Event.Refresh) })
-    val updatedState = rememberUpdatedState(newValue = state().value.purchaseState)
-    when (val purchaseState = updatedState.value) {
+    val updatedState = rememberUpdatedState(newValue = state().value)
+    val isRefreshing = remember { derivedStateOf { updatedState.value.isRefreshing } }
+    val pullRefreshState = rememberPullRefreshState(isRefreshing.value, { onEvent(PurchaseContract.Event.Refresh) })
+    val updatedProductState = rememberUpdatedState(newValue = updatedState.value.purchaseState)
+
+    when (val purchaseState = updatedProductState.value) {
         PurchaseState.Error -> ErrorPopup({ onEvent(PurchaseContract.Event.OnDismissAlertDialog) })
         PurchaseState.Loading -> LoadingDialog()
         is PurchaseState.Data -> {
@@ -43,6 +49,14 @@ internal fun PurchaseScreen(
                     title = { Text(stringResource(R.string.app_name), color = Color.White) },
                     backgroundColor = CustomTheme.colors.lightBlue
                 )
+                Row(){
+                    PullRefreshIndicator(
+                        refreshing = isRefreshing.value,
+                        state = pullRefreshState,
+                        modifier = Modifier.align(Alignment.CenterVertically).weight(1f)
+                    )
+                }
+
                 FilterButtons { purchaseState.productListUiModel.filters }
                 ContentSection(
                     modifier = Modifier.wrapContentHeight(),

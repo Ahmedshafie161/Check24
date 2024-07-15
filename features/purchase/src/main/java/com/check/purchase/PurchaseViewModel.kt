@@ -46,7 +46,7 @@ class PurchaseViewModel @Inject constructor(
         }
     }
 
-    fun refresh(){
+    private fun refresh(){
         fetchProductAndPopulateUi()
     }
 }
