@@ -24,7 +24,8 @@ This project aims to solve Check24 Mid Senior Task.
    - Edge To Edge
      
 7. Peroformance Optimization :
-   - R8 + Baseline profile
+   - R8
+   - Baseline profile
      
 8. Libraries :
    - Netowrking  : Retrofit , Coil
