@@ -18,12 +18,12 @@ This project aims to solve Check24 Mid Senior Task.
 
 5. Kotlin
 
-6. _ _Ui_
+6. _ _Ui_ _
 - Jetpack Compose
 - Splash Screen Api
 - Edge To Edge
      
-7. _ _Peroformance Optimization :_
+7. _ _Peroformance Optimization :_ _
  - R8
  - Baseline profile
      
