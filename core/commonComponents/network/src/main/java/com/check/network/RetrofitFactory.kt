@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitFactory {
 
-private const val BASE_CHECK_URL = ""
+private const val BASE_CHECK_URL = "https://app.check24.de/"
     private var retrofit: Retrofit? = null
     private fun init(baseUrl: String, client: OkHttpClient, converter: Converter.Factory) =
         Retrofit.Builder()

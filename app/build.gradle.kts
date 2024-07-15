@@ -85,9 +85,9 @@ android {
 }
 dependencies {
 
+    api(project(":components:product"))
     //Imported Modules
-    api(project(":components:user"))
-    api(project(":features:authentication"))
+    api(project(":features:purchase"))
     api(project(":core:commonComponents:database"))
     api(project(":core:commonComponents:network"))
     api(project(":core:commonFeatures:designSystem"))

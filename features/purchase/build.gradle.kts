@@ -45,7 +45,7 @@ dependencies {
 
     implementation(project(":core:commonFeatures:designSystem"))
     implementation(project(":core:commonFeatures:ui"))
-    implementation(project(":components:user"))
+    implementation(project(":components:product"))
 
     //compose - Hilt
     api(Dependencies.hiltNavigationCompose)
