@@ -11,13 +11,13 @@ import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.check.android.navigation.bottomNavBar.BottomNavigation
-import com.check.authentication.newProfile.navigation.NewProfileScreen
-import com.check.authentication.newProfile.navigation.NewProfile_NAV_ROUTE
+import com.check.authentication.purchase.navigation.PurchaseScreen
+import com.check.authentication.purchase.navigation.PURCHASE_NAV_ROUTE
 
 @OptIn(ExperimentalComposeUiApi::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun CheckNavHost(startDestination: String = NewProfile_NAV_ROUTE) {
+fun CheckNavHost(startDestination: String = PURCHASE_NAV_ROUTE) {
 
     val navController = rememberNavController()
     Scaffold(modifier = Modifier,
@@ -29,7 +29,7 @@ fun CheckNavHost(startDestination: String = NewProfile_NAV_ROUTE) {
             startDestination = startDestination
         ) {
 
-            NewProfileScreen(
+            PurchaseScreen(
                 onBackPressed = { navController.popBackStack() },
                 onAccountCreated = {
                 navController.popBackStack()

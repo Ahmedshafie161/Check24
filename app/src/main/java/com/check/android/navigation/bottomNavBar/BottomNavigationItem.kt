@@ -4,7 +4,7 @@ import androidx.annotation.StringRes
 import androidx.compose.runtime.Stable
 import androidx.navigation.NavController
 import com.check.R
-import com.check.authentication.newProfile.navigation.NewProfile_NAV_ROUTE
+import com.check.authentication.purchase.navigation.PURCHASE_NAV_ROUTE
 
 @Stable
 data class BottomNavigationItem(
@@ -22,7 +22,7 @@ val bottomNavBarItems = listOf(
         title = R.string.feed,
         unselectedIcon = R.drawable.ic_unselected_feed,
         selectedIcon = R.drawable.ic_selected_feed,
-        screenRoute = NewProfile_NAV_ROUTE,
+        screenRoute = PURCHASE_NAV_ROUTE,
         shouldShowBottomSheetAfterNav = true,
         isSelected = true,
         navigate = { }
@@ -31,14 +31,14 @@ val bottomNavBarItems = listOf(
         title = R.string.brands,
         unselectedIcon = R.drawable.ic_unselected_brands,
         selectedIcon = R.drawable.ic_selected_brands,
-        screenRoute = NewProfile_NAV_ROUTE,
+        screenRoute = PURCHASE_NAV_ROUTE,
         shouldShowBottomSheetAfterNav = true,
         navigate = { }
     ),
     BottomNavigationItem(
         unselectedIcon = R.drawable.ic_camera,
         selectedIcon = R.drawable.ic_camera,
-        screenRoute = NewProfile_NAV_ROUTE,
+        screenRoute = PURCHASE_NAV_ROUTE,
         shouldShowBottomSheetAfterNav = false,
         navigate = { }
     ),
