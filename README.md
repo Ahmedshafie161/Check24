@@ -1,5 +1,5 @@
 # **Table of Contents**
-1. Introduction [Headers]
+1. [Headers]
 2. Technologies
 
 
