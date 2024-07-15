@@ -1,5 +1,8 @@
-# **Table of Contents**
+#### **Table of Contents**
+[Headers]1. Introduction
+2. Technologies
 
+<a name="headers"/>
 # Introduction 
 This project aims to solve Check24 Mid Senior Task. 
 
@@ -18,12 +21,3 @@ This project aims to solve Check24 Mid Senior Task.
   4. Support     : Leak Canary , Firebase Crachlytics
   
   
-
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
-
-# Build and Test
