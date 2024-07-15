@@ -1,6 +1,6 @@
 # **Table of Contents**
 1. [Introduction](https://github.com/Ahmedshafie161/Check24/blob/master/README.md#introduction)
-2. Technologies
+2. [Technologies](https://github.com/Ahmedshafie161/Check24/blob/master/README.md#technologies)
 
 
 # Introduction 
