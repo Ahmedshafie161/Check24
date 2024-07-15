@@ -7,10 +7,10 @@
 This project aims to solve Check24 Mid Senior Task. 
 
 # **Technologies**
-1. **Modularity**
+1. _Modularity_
    - Multi Module - by Component
      
-2. **Architecture Design Pattern**
+2. _Architecture Design Pattern_
    - MVI using base class + DDD + Clean Architecture
 3. Gradle DSL
 
@@ -18,12 +18,12 @@ This project aims to solve Check24 Mid Senior Task.
 
 5. Kotlin
 
-6. **Ui**
+6. _Ui_
 - Jetpack Compose
 - Splash Screen Api
 - Edge To Edge
      
-7. **_Peroformance Optimization_**
+7. _Peroformance Optimization_
  - R8
  - Baseline profile
      
