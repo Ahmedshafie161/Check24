@@ -2,7 +2,7 @@
 1. Introduction
 2. Technologies
 
-<a name="headers"/>
+
 # Introduction 
 This project aims to solve Check24 Mid Senior Task. 
 
