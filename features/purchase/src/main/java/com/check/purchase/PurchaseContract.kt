@@ -1,8 +1,8 @@
-package com.check.authentication.purchase
+package com.check.purchase
 
-import com.check.authentication.purchase.models.HeaderUiModel
-import com.check.authentication.purchase.models.ProductListUiModel
-import com.check.authentication.purchase.models.ProductUiModel
+import com.check.purchase.models.HeaderUiModel
+import com.check.purchase.models.ProductListUiModel
+import com.check.purchase.models.ProductUiModel
 import com.check.ui.base.ViewEvent
 import com.check.ui.base.ViewSideEffect
 import com.check.ui.base.ViewState

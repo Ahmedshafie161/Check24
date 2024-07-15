@@ -1,4 +1,4 @@
-package com.check.authentication.purchase.composables
+package com.check.purchase.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -7,17 +7,20 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
+import com.check.authentication.R
+import com.check.designsystem.theme.CustomTheme
 
 @Composable
-fun FooterText() {
+fun FooterText(modifier: Modifier = Modifier) {
     Text(
-        "Footer text..",
-        modifier = Modifier
+        stringResource(id = R.string.purchase_footer_trade_mark),
+        modifier = modifier
             .fillMaxWidth()
             .background(Color.LightGray)
-            .padding(16.dp),
-        textAlign = TextAlign.Center
+            .padding(CustomTheme.sizing.x),
+        textAlign = TextAlign.Start,
+        color = Color.Black
     )
 }

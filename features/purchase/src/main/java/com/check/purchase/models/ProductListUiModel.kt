@@ -1,4 +1,4 @@
-package com.check.authentication.purchase.models
+package com.check.purchase.models
 
 import kotlinx.collections.immutable.ImmutableList
 

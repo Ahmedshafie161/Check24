@@ -14,6 +14,7 @@ object AbsColor {
     val lightGreen: Color = Color(0xff07f77e)
     val lightGrayy: Color = Color(0X99ffffff)
     val lightBlue: Color = Color(0XFF035EA8)
+    val gold: Color = Color(0XFFFCD205)
 
 }
 

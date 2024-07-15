@@ -1,4 +1,4 @@
-package com.check.authentication.purchase.navigation;
+package com.check.purchase.navigation;
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
@@ -6,8 +6,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.check.authentication.purchase.PurchaseViewModel
-import com.check.authentication.purchase.composables.PurchaseScreen
+import com.check.purchase.PurchaseViewModel
+import com.check.purchase.composables.PurchaseScreen
 import com.check.ui.base.sideEffect
 import com.check.ui.base.viewState
 

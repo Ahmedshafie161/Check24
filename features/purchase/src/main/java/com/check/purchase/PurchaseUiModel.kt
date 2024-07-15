@@ -1,4 +1,4 @@
-package com.check.authentication.purchase
+package com.check.purchase
 
 data class PurchaseUiModel(
     val fullName: String,

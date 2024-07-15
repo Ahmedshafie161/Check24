@@ -1,4 +1,4 @@
-package com.check.authentication.purchase.composables
+package com.check.purchase.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -11,13 +11,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import com.check.designsystem.theme.CustomTheme
 
 @Composable
 fun LoadingDialog() {
     Dialog(onDismissRequest = {}) {
         Box(
             modifier = Modifier
-                .size(100.dp)
+                .size(CustomTheme.sizing.large_x)
                 .background(Color.White, shape = RoundedCornerShape(8.dp)),
             contentAlignment = Alignment.Center
         ) {

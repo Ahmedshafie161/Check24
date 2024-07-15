@@ -1,4 +1,4 @@
-package com.check.authentication.purchase.composables
+package com.check.purchase.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

@@ -13,9 +13,9 @@ data class AbsSizing(
     val half: Dp = .5.dp,
     val unit: Dp = 1.dp,
     val x_small: Dp = 11.3.dp,
-    val small: Dp = 24.dp,
+    val small: Dp = 4.dp,
     val small_x: Dp = 34.5.dp,
-    val medium: Dp = 28.dp,
+    val medium: Dp = 60.dp,
     val patrolCardHeightMissionDetails: Dp = 200.dp,
     val patrolCardHeightLogbook: Dp = 134.dp,
     val buttonWidth: Dp = 161.dp,
@@ -23,6 +23,8 @@ data class AbsSizing(
     val cardHeight :Dp = 221.5.dp,
     val small_xL :Dp = 8.dp,
     val small_xxL :Dp = 20.dp,
+    val x: Dp = 16.dp,
+    val large_x: Dp = 100.dp
 )
 
 val LocalAbsSizing = staticCompositionLocalOf { AbsSizing() }

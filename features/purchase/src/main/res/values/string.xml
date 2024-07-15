@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Check24</string>
+    <string name="purchase_footer_trade_mark">© 2021 Check24</string>
+    <string name="purchase_product_price">Preis: %s %s</string>
 </resources>
