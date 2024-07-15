@@ -1,5 +1,5 @@
 #### **Table of Contents**
-[Headers]1. Introduction
+1. Introduction
 2. Technologies
 
 <a name="headers"/>
