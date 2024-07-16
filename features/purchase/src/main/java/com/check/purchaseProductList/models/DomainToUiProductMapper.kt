@@ -1,4 +1,4 @@
-package com.check.purchase.models
+package com.check.purchaseProductList.models
 
 import com.check.product.domain.models.HeaderDomainModel
 import com.check.product.domain.models.PriceDomainModel

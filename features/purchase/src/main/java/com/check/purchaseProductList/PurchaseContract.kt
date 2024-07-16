@@ -1,6 +1,6 @@
-package com.check.purchase
+package com.check.purchaseProductList
 
-import com.check.purchase.models.ProductListUiModel
+import com.check.purchaseProductList.models.ProductListUiModel
 import com.check.ui.base.ViewEvent
 import com.check.ui.base.ViewSideEffect
 import com.check.ui.base.ViewState

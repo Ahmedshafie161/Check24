@@ -1,4 +1,4 @@
-package com.check.purchase.composables
+package com.check.purchaseProductList.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

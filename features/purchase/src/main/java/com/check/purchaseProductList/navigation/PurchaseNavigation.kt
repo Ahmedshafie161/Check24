@@ -1,4 +1,4 @@
-package com.check.purchase.navigation
+package com.check.purchaseProductList.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder

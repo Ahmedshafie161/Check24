@@ -1,7 +1,7 @@
-package com.check.purchase
+package com.check.purchaseProductList
 
 import androidx.lifecycle.viewModelScope
-import com.check.purchase.models.toProductListUiModel
+import com.check.purchaseProductList.models.toProductListUiModel
 import com.check.product.domain.usecases.FetchProductListUseCase
 import com.check.ui.base.BaseViewModel
 import com.check.ui.base.IGlobalState

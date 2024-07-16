@@ -10,9 +10,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.check.android.navigation.bottomNavBar.BottomNavigation
-import com.check.purchase.navigation.PurchaseScreen
-import com.check.purchase.navigation.PURCHASE_NAV_ROUTE
+import com.check.purchaseProductList.navigation.PurchaseScreen
+import com.check.purchaseProductList.navigation.PURCHASE_NAV_ROUTE
 
 @OptIn(ExperimentalComposeUiApi::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")

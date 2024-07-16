@@ -4,7 +4,7 @@ import androidx.annotation.StringRes
 import androidx.compose.runtime.Stable
 import androidx.navigation.NavController
 import com.check.R
-import com.check.purchase.navigation.PURCHASE_NAV_ROUTE
+import com.check.purchaseProductList.navigation.PURCHASE_NAV_ROUTE
 
 @Stable
 data class BottomNavigationItem(

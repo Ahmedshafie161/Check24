@@ -1,4 +1,4 @@
-package com.check.purchase.composables
+package com.check.purchaseProductList.composables
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -28,7 +28,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import com.check.authentication.R
 import com.check.designsystem.theme.CustomTheme
-import com.check.purchase.models.ProductUiModel
+import com.check.purchaseProductList.models.ProductUiModel
 import com.check.ui.base.components.RemoteImage
 import com.check.ui.base.extentions.toFormattedDateString
 

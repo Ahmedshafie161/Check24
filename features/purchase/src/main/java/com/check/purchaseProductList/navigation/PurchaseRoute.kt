@@ -1,15 +1,14 @@
-package com.check.purchase.navigation;
+package com.check.purchaseProductList.navigation;
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.check.purchase.PurchaseViewModel
-import com.check.purchase.composables.PurchaseScreen
+import com.check.purchaseProductList.PurchaseViewModel
+import com.check.purchaseProductList.composables.PurchaseScreen
 import com.check.ui.base.sideEffect
 import com.check.ui.base.viewState
 

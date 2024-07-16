@@ -1,4 +1,4 @@
-package com.check.purchase.models
+package com.check.purchaseProductList.models
 
 data class ProductUiModel(
     val name: String,

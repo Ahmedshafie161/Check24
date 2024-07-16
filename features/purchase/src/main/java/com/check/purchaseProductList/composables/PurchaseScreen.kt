@@ -1,9 +1,8 @@
-package com.check.purchase.composables
+package com.check.purchaseProductList.composables
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
@@ -12,10 +11,8 @@ import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
 import androidx.compose.runtime.derivedStateOf
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
@@ -24,8 +21,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import com.check.authentication.R
 import com.check.designsystem.theme.CustomTheme
-import com.check.purchase.PurchaseContract
-import com.check.purchase.PurchaseState
+import com.check.purchaseProductList.PurchaseContract
+import com.check.purchaseProductList.PurchaseState
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable

@@ -1,4 +1,4 @@
-package com.check.purchase.composables
+package com.check.purchaseProductList.composables
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.check.designsystem.theme.CustomTheme
-import com.check.purchase.models.ProductUiModel
+import com.check.purchaseProductList.models.ProductUiModel
 import kotlinx.collections.immutable.ImmutableList
 
 @Composable
